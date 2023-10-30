@@ -69,18 +69,23 @@ public class MainActivity extends AppCompatActivity {
 
         if (!foundUpperCase) {
             Toast.makeText(this, "You are missing an upper case letter", Toast.LENGTH_SHORT).show();
+            tv.setText("You are missing an upper case letter");
             return false;
         } else if (!foundLowerCase) {
             Toast.makeText(this, "You are missing a lower case letter", Toast.LENGTH_SHORT).show();
+            tv.setText("You are missing a lower case letter");
             return false;
         } else if (!foundNumber) {
             Toast.makeText(this, "You are missing a number", Toast.LENGTH_SHORT).show();
+            tv.setText("You are missing a number");
             return false;
         } else if (!foundSpecial) {
             Toast.makeText(this, "You are missing a special character", Toast.LENGTH_SHORT).show();
+            tv.setText("You are missing a special character");
             return false;
         } else {
-            return true; // only get here if they're all true
+            tv.setText("Password is valid!");
+            return true;  // only get here if they're all true
         }
     }
 
